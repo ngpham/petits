@@ -1,0 +1,6 @@
+c(x) <= a(x)
+a(x) -15 <= b(x)
+b(x) + 15 <= c(x)
+c(x) - 10 <= d(x) or b(x) + 10 <= d(x)
+d(x) + 15 <= c(x) or d(x) + 15 <= b(x)
+d(x) + 15 <= b(x) or d(x) + 5 <= d(x)

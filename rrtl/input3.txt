@@ -1,0 +1,20 @@
+BUTTON1(x1) <= StartRA1(x1)
+StartRA1(x2) + 40 <= StopRA1(x2)
+StopRA1(x3) <= GRANT1true(x3)
+GRANT1true(x4) <= StartMOVE1(x4)
+StartMOVE1(x4) - 5 <= GRANT1true(x4)
+StopMOVE1(x6) - 20 <= StartMOVE1(x6)
+
+BUTTON2(x7) <= StartRA2(x7)
+StartRA2(x8) + 40 <= StopRA2(x8)
+StopRA2(x9) <= GRANT2true(x9)
+GRANT2true(x10) <= StartMOVE2(x10)
+StartMOVE2(x10) - 5 <= GRANT2true(x10)
+StopMOVE2(x12) -20 <= StartMOVE2(x12)
+
+GRANT1true(x5) + 30 <= GRANT1false(x5)
+GRANT2true(x11) + 30 <= GRANT2false(x11)
+GRANT1false(x13) <= GRANT2true(x14) or GRANT2false(x14) <= GRANT1true(x13)
+
+StartMOVE1(I) <= StopMOVE2(J)
+StartMOVE2(J) <= StopMOVE1(I)
